@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  deleteAnAppointment,
   getALLAppointment,
   postAppointment,
   updateAppointmentStatus,
@@ -11,10 +12,15 @@ import {
 
 const router = express.Router();
 router.post("/newAppointment", isPatientAuthenticated, postAppointment);
-router.get("/getAppointments", isAdminAuthenticated, getALLAppointment);
+router.get("/getAppointment", isAdminAuthenticated, getALLAppointment);
 router.put(
   "/updateAppointment/:id",
   isAdminAuthenticated,
   updateAppointmentStatus
+);
+router.delete(
+  "/deleteAppointment/:id",
+  isAdminAuthenticated,
+  deleteAnAppointment
 );
 export default router;

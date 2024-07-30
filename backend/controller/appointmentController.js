@@ -110,3 +110,15 @@ export const updateAppointmentStatus = catchAsyncErrors(
     });
   }
 );
+export const deleteAnAppointment = catchAsyncErrors(async (req, res, next) => {
+  const { id } = req.params;
+  let appointment = await Appointment.findById(id);
+  if (!appointment) {
+    return next(new ErrorHandler("Appointment Not Found", 404));
+  }
+  await appointment.deleteOne(); // Method to Delete an Appointment ..
+  res.status(200).json({
+    success: true,
+    message: "Appointment Deleted",
+  });
+});
