@@ -183,8 +183,9 @@ h6 {
   flex: 1;
   font-size: 24px;
   padding: 10px 10px 10px 40px;
-  border-radius: 7px;
-  border: 1px solid gray;
+  border-radius: 9px;
+  border: none;
+  box-shadow: 4px 4px 10px  #cfcece;
 }
 .form-component button {
   padding: 10px 35px;
@@ -195,7 +196,7 @@ h6 {
   border-radius: 8px;
   font-size: 24px;
   margin-bottom: 30px;
-  background: linear-gradient(140deg, #9083d5, #271776ca);
+  background: linear-gradient(140deg, #9082ce, #2c03fcca);
 }
 .form-component .wrapper {
   display: flex;
@@ -388,7 +389,7 @@ footer .content div:last-child div svg {
   padding-bottom: 50px;
 }
 .departments h2 {
-  color: gray;
+  color: rgb(0, 0, 0);
   margin-bottom: 30px;
 }
 .card {
@@ -401,7 +402,7 @@ footer .content div:last-child div svg {
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 20px;
-  min-height: 360px;
+  min-height: 300px;
   margin: 0 10px;
   text-decoration: none;
 }
