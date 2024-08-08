@@ -503,6 +503,11 @@ nav .btn {
   font-size: 20px;
   font-weight: 600;
   z-index: 2;
+  transition: all ease 0.1s;
+}
+nav .btn:hover{
+  box-shadow: 5px 5px 0px rgb(253, 248, 248);
+  scale: 1.025;
 }
 nav .logoutBtn {
   background: linear-gradient(135deg, black, rgb(49, 49, 49));
