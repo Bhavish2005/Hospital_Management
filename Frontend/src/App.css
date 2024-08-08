@@ -7,7 +7,7 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #e5e5e5;
+  background: #efe9ff;
 }
 .btn {
   padding: 7px 20px;
@@ -38,21 +38,21 @@ h1 {
   font-weight: 900;
 }
 h2 {
-  font-size: 32px;
-  font-weight: 900;
+  font-size: 34px;
+  font-weight: 1000;
 }
 h3 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 900;
 }
 h4 {
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 1000;
 }
 h5,
 h6 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 1000;
 }
 @media (max-width: 1186px) {
   h1 {
