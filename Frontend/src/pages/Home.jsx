@@ -11,7 +11,7 @@ const Home = () => {
         title={
           "Welcome To Lifeline Medical Institute! Government Trusted And Verified HealthCare Provider "
         }
-        imageUrl={"/doctorAvatar1.png"}
+        imageUrl={"/doctorphone.png"}
       />
       <Biography imageUrl={"/about.png"} />
       <Departments />

@@ -115,14 +115,18 @@ h6 {
 }
 .animated-image {
   animation: moveUpDown 1s infinite alternate ease-in-out;
+
+  
 }
 
 @keyframes moveUpDown {
   0% {
     transform: translateY(0);
+    transform: scale(1.15);
   }
   100% {
     transform: translateY(20px);
+    transform: scale(1.25);
   }
 }
 @media (max-width: 1186px) {
@@ -544,7 +548,7 @@ nav svg {
 }
 @media (max-width: 1100px) {
   nav {
-    background: #ffffffbf;
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -563,8 +567,10 @@ nav svg {
     left: 0;
     height: 100%;
     width: 400px;
-    background: #ffffffbf;
+    background: rgba(247, 247, 247, 0.589);
+    backdrop-filter: blur(10px);
     top: 79px;
+    
   }
   nav .showmenu {
     display: flex;
@@ -577,7 +583,8 @@ nav svg {
     left: -100%;
     width: 400px;
     height: 100%;
-    background: #ffffffbf;
+    
+    backdrop-filter: blur(10px);
     top: 79px;
   }
   nav .navLinks .links {
@@ -608,7 +615,7 @@ nav svg {
     background: #fff;
   }
   nav .navLinks {
-    background: #fff;
+    background:#fff;
     width: 100%;
   }
 }
