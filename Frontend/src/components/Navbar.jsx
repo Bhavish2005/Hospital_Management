@@ -4,8 +4,9 @@ import { Context } from "../main";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { GiHamburgerMenu } from "react-icons/gi";
+
 const Navbar = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
   const navigateTo = useNavigate();
   const handleLogout = async () => {
@@ -26,7 +27,10 @@ const Navbar = () => {
   };
   return (
     <nav className="container">
-      <div className="logo">Lifeline</div>
+      <div className="logo">
+        <img src="/logo.png" alt="" />
+        <h1>Lifeline</h1>
+      </div>
       <div className={show ? "navLinks showmenu" : "navLinks"}>
         <div className="links">
           <Link to={"/"}>Home</Link>

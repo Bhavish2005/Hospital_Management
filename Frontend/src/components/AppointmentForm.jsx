@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const AppointmentForm = () => {
@@ -198,24 +198,13 @@ const AppointmentForm = () => {
           >
             <p style={{ marginTop: "10px", marginBottom: "10px" }}>
               Have You Visited Before?
+              <input
+                type="checkbox"
+                checked={hasVisited}
+                onChange={(e) => setHasVisited(e.target.checked)}
+                style={{ flex: "none", width: "25px" }}
+              />
             </p>
-            <input
-              type="checkbox"
-              checked={hasVisited}
-              onChange={(e) => setHasVisited(e.target.checked)}
-              style={{ flex: "none", width: "25px" }}
-            />
-            <Link
-              to={"/login"}
-              style={{
-                textDecoration: "none",
-                color: "grey",
-                alignItems: "center",
-                paddingTop: "10px",
-              }}
-            >
-              Login Now
-            </Link>
           </div>
           <div
             style={{

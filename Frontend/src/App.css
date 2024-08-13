@@ -73,6 +73,7 @@ h6 {
   }
 }
 .hero {
+  
   display: flex;
   gap: 50px;
   padding-top: 120px;
@@ -106,6 +107,7 @@ h6 {
   justify-content: center;
   flex-direction: column;
   gap: 50px;
+
 }
 .hero .banner:last-child {
   display: flex;
@@ -150,6 +152,7 @@ h6 {
   @media (max-width: 700px) {
     .hero {
       padding-bottom: 40px;
+      top: 20px;
     }
   }
 }
@@ -197,6 +200,7 @@ h6 {
   animation:mymove 2s ease-in-out infinite;
   
 }
+
 .form-component form textarea{
   flex: 1;
   font-size: 24px;
@@ -335,27 +339,33 @@ h6 {
 footer {
   padding-bottom: 30px !important;
 }
+footer .content img{
+  height: 100px;
+  width: 300px;
+}
 footer hr {
   margin-bottom: 30px;
 }
 footer .content {
   display: flex;
   gap: 20px;
+  justify-content: space-evenly;
+ 
 }
 footer .content div {
   flex: 1;
 }
 footer .content div:nth-child(3) {
-  flex: 2;
+  flex: 1.5;
 }
-footer .content div h4 {
-  font-weight: 700;
+footer .content div h3 {
+  font-weight: 900;
   margin-bottom: 20px;
 }
 footer .content div ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 footer .content div ul a {
   color: gray;
@@ -376,7 +386,7 @@ footer .content div ul li span:first-child {
 footer .content div:last-child div {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   margin-bottom: 10px;
 }
 footer .content div:last-child div svg {
@@ -477,6 +487,8 @@ nav {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
   z-index: 2;
+ 
+  /* backdrop-filter: blur(10px); */
   
 }
 nav .logo {
@@ -486,13 +498,19 @@ nav .logo {
   font-size: 3rem;
   font-weight: 600;
 }
+nav .logo img{
+  height: 100px;
+  width:100px
+}
 nav .navLinks {
   flex: 1.5;
+  
 }
 nav .navLinks {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 nav .navLinks .links {
   display: flex;
@@ -523,11 +541,10 @@ nav .btn {
   font-size: 20px;
   font-weight: 600;
   z-index: 2;
-  transition: all ease 0.1s;
+  transition: all ease 0.2s;
 }
 nav .btn:hover{
-  box-shadow: 5px 5px 0px rgb(253, 248, 248);
-  scale: 1.025;
+transform: scale(1.015);
 }
 nav .logoutBtn {
   background: linear-gradient(135deg, black, rgb(49, 49, 49));
@@ -554,6 +571,7 @@ nav svg {
     position: fixed;
     top: 0;
     left: 0;
+    
   }
   nav .hamburger {
     display: flex;
@@ -571,7 +589,7 @@ nav svg {
     width: 400px;
     background: rgba(247, 247, 247, 0.589);
     backdrop-filter: blur(10px);
-    top: 79px;
+    top: 0px;
     
   }
   nav .showmenu {
@@ -587,7 +605,7 @@ nav svg {
     height: 100%;
     
     backdrop-filter: blur(10px);
-    top: 79px;
+    top: 110px;
   }
   nav .navLinks .links {
     flex-direction: column;
@@ -614,11 +632,15 @@ nav svg {
 }
 @media (max-width: 555px) {
   nav {
-    background: #fff;
+   background: rgba(255, 255, 255, 0.815);
   }
   nav .navLinks {
-    background:#fff;
+    background:linear-gradient(blue,white,100deg);
     width: 100%;
+  }
+  nav .navLinks{
+    background: rgba(255, 255, 255, 0.904);
+    top: 110px;
   }
 }
 
