@@ -42,7 +42,7 @@ const AppointmentForm = () => {
   }, []);
   const navigateTo = useNavigate();
   const handleAppointment = async (e) => {
-    e.preventDefault;
+    e.preventDefault();
     try {
       const hasVisitedBool = Boolean(hasVisited);
       const { data } = await axios.post(
@@ -54,9 +54,8 @@ const AppointmentForm = () => {
           phone,
           nic,
           gender,
-          appointmentDate,
-          department,
           appointment_date: appointmentDate,
+          department,
           doctor_firstName: doctorFirstName,
           doctor_lastName: doctorLastName,
           address,
