@@ -7,9 +7,9 @@ const Appointment = () => {
     <>
       <Hero
         title={
-          "Not Feling Well, Book Your Appointment Now |LifeLine Medical Institute"
+          "Not Feeling Well, Book Your Appointment Now | LifeLine Medical Institute"
         }
-        imageUrl={"/appointment-1.png"}
+        imageUrl={"/appointment.png"}
       />
       <AppointmentForm />
     </>
