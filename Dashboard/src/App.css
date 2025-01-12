@@ -547,6 +547,7 @@ body {
 }
 .add-doctor-form form .first-wrapper div:first-child {
   flex: 1;
+  flex-direction:column;
 }
 .add-doctor-form form .first-wrapper div:first-child img {
   width: 100%;
@@ -554,8 +555,9 @@ body {
   margin-bottom: 20px;
 }
 .add-doctor-form form .first-wrapper div:first-child input {
+  margin-top: 150px;
   width: 100%;
-  padding: 10px;
+  padding: 15px;
 }
 .add-doctor-form
   form
@@ -590,6 +592,7 @@ body {
   font-size: 24px;
   margin-bottom: 30px;
   background: linear-gradient(140deg, #9083d5, #271776ca);
+  margin-left: 20px;
 }
 @media (max-width: 945px) {
   .add-doctor-form form .first-wrapper {

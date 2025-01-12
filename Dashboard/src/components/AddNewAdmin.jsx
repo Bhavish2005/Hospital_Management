@@ -6,7 +6,7 @@ import {  Navigate, useNavigate } from 'react-router-dom';
 import Logo from '../Assests/Logo.png';  
 
 function AddNewAdmin() {
-  const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+  const { isAuthenticated, } = useContext(Context);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -30,7 +30,7 @@ function AddNewAdmin() {
         }
       );
       toast.success(response.data.message);
-      setIsAuthenticated(true);
+      // setIsAuthenticated(true);
       navigateTo("/");
     } catch (error) {
       toast.error(error.response.data.message);
