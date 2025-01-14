@@ -70,8 +70,8 @@ function Dashboard() {
   </div>
   <div className='thirdBox'>
     <p>Registered Doctors</p>
-    <h3>{appointments && appointments.length>0?
-      appointments.length : "0"}</h3>
+    <h3>{doctors && doctors.length>0?
+      doctors.length : "0"}</h3>
   </div>
       </div>
       <div className='banner'>
