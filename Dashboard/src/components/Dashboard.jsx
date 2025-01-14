@@ -5,6 +5,7 @@ import { Navigate } from 'react-router-dom';
 import  photo from '../Assests/Doctor.png';
 import {GoCheckCircleFill} from "react-icons/go";
 import {AiFillCloseCircle} from "react-icons/ai";
+import { toast } from 'react-toastify';
 function Dashboard() {
   const {isAuthenticated,user}=useContext(Context)
   const [appointments,setAppointments]=useState([]);
@@ -31,11 +32,19 @@ function Dashboard() {
         toast.success(error.response.data.message);
       }
     }
+    
     fetchDoctors();
     fetchAppointments();
 
   },[]);
-
+  const handleUpdates=async(appointmentId,status)=>{
+    try {const {data}=await axios.put(`http://localhost:4000/api/v1/appointment/updateAppointment/${appointmentId}`,{status},{withCredentials:true});
+    setAppointments(prevAppointments=>prevAppointments.map((appointment)=>appointment._id===appointmentId? {...appointment,status}:appointment));
+          toast.success(data.message);
+    } catch (error) {
+      toast.error(error.response.data.message);
+    }
+  }
   if(!isAuthenticated){
     return <Navigate to="/login"/>
   }
@@ -80,7 +89,7 @@ function Dashboard() {
         </thead>
         <tbody>
           {
-            appointments&&appointments.length>0?(appointments.map(element=>{
+            appointments && appointments.length>0?(appointments.map(element=>{
               return (
                 <tr key={element.id}>
                   <td>{`${element.firstName} ${element.lastName}`}</td>
@@ -88,7 +97,7 @@ function Dashboard() {
                   <td>{`${element.doctor.firstName} ${element.doctor.lastName}`}</td>
                   <td>{element.department}</td>
                   <td>
-                    <select className={element.status==="Pending" ?" value-pending" : element.status==="Rejected"?"value-rejected":"value-accepted"} value={element.status} onChange={(e)=>e.target.value}>
+                    <select className={element.status==="Pending" ?" value-pending" : element.status==="Rejected"?"value-rejected":"value-accepted"} value={element.status} onChange={(e)=>{ handleUpdates(element._id,e.target.value)}}>
                       <option value="Pending" className='value-pending'>Pending</option>
                       <option value="Rejected" className='value-rejected'>Rejected</option>
                       <option value="Accepted" className='value-accepted'>Accepted</option>
